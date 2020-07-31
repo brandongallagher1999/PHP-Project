@@ -22,8 +22,9 @@
             $check = getimagesize($_FILES["profile_image"]["tmp_name"]);
             if($check !== false)
             {
-                echo "File is an image - " . $check["mime"] . ".";
+                copy($_FILES['profile_image']['tmp_name'], $target_file);
                 $uploadOk = 1;
+                header("Location: login.php");
             }
             else
             {
@@ -47,7 +48,7 @@
         $statement = $db->prepare($sql);
     
         // hash password
-        $newPass = password_hash($password);
+        $newPass = password_hash($password, PASSWORD_DEFAULT);
 
         $statement->bindParam(":username", $username);
         $statement->bindParam(":email", $email);

@@ -17,7 +17,7 @@
                 if (!isset($_SESSION["logged"]))
                 {   
                     $html = <<<hm
-                    <form action="login_session.php" method="post">
+                    <form action="validate.php" method="post">
                     <label for="username"> Username </label>
                     <input type="text" name="username" id="name"><br>
                     <label for="password">Password</label>
