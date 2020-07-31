@@ -44,6 +44,7 @@
         ?>
         <a href="view_records.php" class="button is-warning">Go to Display User Info</a>
         <a href="delete.php" class="button is-danger">Go to Update / Delete Page</a>
+        <a href="login.php" class="button is-primary">Login</a>
         <form action="delete_session.php" method="post">
             <input type="submit" class="button is-danger" name="submit" value="Delete Session">
         </form>
